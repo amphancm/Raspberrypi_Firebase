@@ -26,7 +26,7 @@ GPIO.setup(18,GPIO.OUT)
 #    storageBucket: "pointznet-5c96f.appspot.com",
 #    messagingSenderId: "150215431986"
 
-firebase = firebase.FirebaseApplication('https://katunyou-167115.firebaseio.com', None)
+firebase = firebase.FirebaseApplication('https://YOUR-FIREBASE-URL.firebaseio.com', None)
 #firebase.put("/Control", "/device1", "on")
 
 def updatePiInfo():
