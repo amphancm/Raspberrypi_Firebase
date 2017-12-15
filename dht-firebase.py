@@ -27,7 +27,7 @@ pin = 4
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
 
-firebase = firebase.FirebaseApplication('https://raspberrypi-188914.firebaseio.com/', None)
+firebase = firebase.FirebaseApplication('https://YOUR_FIREBASE_URL.firebaseio.com/', None)
 #firebase.put("/dht", "/temp", "0.00")
 #firebase.put("/dht", "/humidity", "0.00")
 
