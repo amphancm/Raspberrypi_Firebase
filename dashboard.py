@@ -15,7 +15,7 @@ from functools import partial
 LOGGER = 1
 buttonTest = 23
 sensor_pin_number = 21;
-firebase = firebase.FirebaseApplication('https://katunyou-167115.firebaseio.com', None)
+firebase = firebase.FirebaseApplication('https://YOUR_ID.firebaseio.com', None)
 
 # LOGGER
 def printlog(text):
