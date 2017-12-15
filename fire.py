@@ -20,12 +20,6 @@ GPIO.cleanup()
 GPIO.setwarnings(False)
 GPIO.setup(18,GPIO.OUT)
 
-#apiKey: "AIzaSyAGYNc-7ffMfr33btXdPpV23ufSqCD2c7Y",
-#    authDomain: "pointznet-5c96f.firebaseapp.com",
-#    databaseURL: "https://pointznet-5c96f.firebaseio.com",
-#    storageBucket: "pointznet-5c96f.appspot.com",
-#    messagingSenderId: "150215431986"
-
 firebase = firebase.FirebaseApplication('https://YOUR-FIREBASE-URL.firebaseio.com', None)
 #firebase.put("/Control", "/device1", "on")
 
@@ -54,14 +48,6 @@ def updatePiInfo():
 			draw.text((x, top+16), ' OFF', font=font42, fill=255)
 			disp.image(image)
 			disp.display()
-
-#result = firebase.post('/users', new_user, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
-#print result
-#{u'name': u'-Io26123nDHkfybDIGl7'}
-
-#result = firebase.post('/users', new_user, {'print': 'silent'}, {'X_FANCY_HEADER': 'VERY FANCY'})
-#print result == None
-#sleepTime = 10
 
 
 # Raspberry Pi pin configuration:
@@ -123,13 +109,13 @@ disp.display()
 firebase.put("/Control", "/device1", "off")
 
 while True:
-		updatePiInfo()
-		#firebase.put("/Control", "/device1", "off")
+	updatePiInfo()
+	#firebase.put("/Control", "/device1", "off")
 		
         #Retrieve sleep time from firebase and continue the loop
         #sleepTime = firebase.get("/Settings/info_update_time_interval", None)
         #sleepTime = int(sleepTime)
-		sleep(1)
+	sleep(1)
 	
 
 
